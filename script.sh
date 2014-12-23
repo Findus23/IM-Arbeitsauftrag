@@ -32,7 +32,7 @@ for i in ${dateien[@]}
 do
 
 	echo "# Datei '$i' wird konvertiert... ($a von $dateianzahl)" >&3;
-	a_f="$(printf "%02d" $a)"
+	a_f="$(printf "%02d" $a)" # Darstellung mit führender Null
 	echo "./neu/Bild_$a.jpg"
 	convert -monitor -caption '%f' -resize 640x $i  \
 		-gravity SouthEast ./done/logo.png -geometry +15+15 \
@@ -45,7 +45,7 @@ do
 	((a++))
 done
 echo "# Thumbnails werden erstellt..." >&3
-montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/*.$format -caption '%f\n%wx%h' -font 'Liberation Sans' -pointsize 20 -background transparent -frame 5 ./done/Thumbnails.$format
+montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/$name*.$format -caption '%f\n%wx%h' -font 'Liberation Sans' -pointsize 20 -background transparent -frame 5 ./done/Thumbnails.$format
 echo "# Das Programm ist fertig." >&3
 notify-send --app-name=imagemagick --icon=imagemagick -t 5000 Imagemagick "Konvertierung abgeschlossen" 
 rm ./done/logo.png
