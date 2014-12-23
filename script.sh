@@ -47,4 +47,5 @@ done
 echo "# Thumbnails werden erstellt..." >&3
 montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/*.$format -caption '%f\n%wx%h' -font 'Liberation Sans' -pointsize 20 -background transparent -frame 5 ./done/Thumbnails.$format
 echo "# Das Programm ist fertig." >&3
+notify-send --app-name=imagemagick --icon=imagemagick -t 5000 Imagemagick "Konvertierung abgeschlossen" 
 rm ./done/logo.png
