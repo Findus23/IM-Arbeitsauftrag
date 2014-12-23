@@ -22,3 +22,4 @@ do
 		./done/2008-­Sanierung-­$a.png
 	((a++))
 done
+montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/*.png -caption '%f\n%wx%h' -font 'Liberation Sans' -pointsize 20 -background transparent -frame 5 ./done/test.PNG
