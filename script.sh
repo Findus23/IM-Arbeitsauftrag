@@ -24,8 +24,14 @@ fi
 convert -monitor -resize 100x Logo-ohne-BRG-klein.png ./done/logo.png
 
 a=1
-for i in *.JPG
+exec 3> >(zenity --progress --title="Konvertierung..." --percentage=0 --width=400)
+echo "# Ermittle Dateien..." >&3
+dateien=(*.JPG)
+dateianzahl=${#dateien[@]}
+for i in ${dateien[@]}
 do
+
+	echo "# Datei '$i' wird konvertiert... ($a von $dateianzahl)" >&3;
 	a_f="$(printf "%02d" $a)"
 	echo "./neu/Bild_$a.jpg"
 	convert -monitor -caption '%f' -resize 640x $i  \
@@ -35,8 +41,10 @@ do
 			 -gravity center -font 'Liberation Sans' -pointsize 26 \
 		+polaroid \
 		./done/$name­$a_f.$format
+	echo "$a/$dateianzahl*100" | bc -l >&3
 	((a++))
 done
+echo "# Thumbnails werden erstellt..." >&3
 montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/*.$format -caption '%f\n%wx%h' -font 'Liberation Sans' -pointsize 20 -background transparent -frame 5 ./done/Thumbnails.$format
+echo "# Das Programm ist fertig." >&3
 rm ./done/logo.png
-zenity --info --text "Das Programm ist fertig." --title "Fertig"
