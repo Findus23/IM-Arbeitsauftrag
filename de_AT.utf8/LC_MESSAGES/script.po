@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: script\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-24 12:02+0100\n"
+"PO-Revision-Date: 2014-12-24 12:03+0100\n"
+"Last-Translator: Lukas Winkler <l.winkler23@gmx.at>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../\n"
+"X-Poedit-SearchPath-0: ../..\n"
+
+#: script.sh:9
+msgid "created new folder"
+msgstr "Neuen Ordner erstellt"
+
+#: script.sh:12
+msgid "deleted old files"
+msgstr "alte Dateien gelöscht"
+
+#: script.sh:15
+msgid "What is the export file format?"
+msgstr "Welches Dateiformat soll ausgegeben werden?"
+
+#: script.sh:15
+msgid "file format"
+msgstr "Dateiformat"
+
+#: script.sh:21
+msgid "How should the files be named?"
+msgstr "Welchen  Namen sollen die Dateien haben?"
+
+#: script.sh:21
+msgid "file name"
+msgstr "Dateiname"
+
+#: script.sh:30
+msgid "converting..."
+msgstr "\"Konvertierung..."
+
+#: script.sh:31
+msgid "# determining files..."
+msgstr "# Ermittle Dateien..."
+
+#: script.sh:37
+#, sh-format
+msgid "# converting '$i'... ($a out of $dateianzahl)"
+msgstr "# Datei '$i' wird konvertiert... ($a von $dateianzahl)"
+
+#: script.sh:49
+msgid "# generating thumbnails..."
+msgstr "# Thumbnails werden erstellt..."
+
+#: script.sh:51
+msgid "# conversion is ready."
+msgstr "# Das Programm ist fertig."
+
+#: script.sh:52
+msgid "conversion is ready"
+msgstr "Das Programm ist fertig"

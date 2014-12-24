@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-24 12:02+0100\n"
+"PO-Revision-Date: 2014-12-24 12:08+0100\n"
+"Last-Translator: Lukas Winkler <l.winkler23@gmx.at>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+
+#: script.sh:9
+msgid "created new folder"
+msgstr "nouveau dossier créé"
+
+#: script.sh:12
+msgid "deleted old files"
+msgstr "les anciens fichiers supprimés"
+
+#: script.sh:15
+msgid "What is the export file format?"
+msgstr "Quel est le format de fichier d'exportation?"
+
+#: script.sh:15
+msgid "file format"
+msgstr "format de fichier"
+
+#: script.sh:21
+msgid "How should the files be named?"
+msgstr "Comment les fichiers doivent être nommés?"
+
+#: script.sh:21
+msgid "file name"
+msgstr "nom de fichier"
+
+#: script.sh:30
+msgid "converting..."
+msgstr "convertir ..."
+
+#: script.sh:31
+msgid "# determining files..."
+msgstr "# déterminer fichiers..."
+
+#: script.sh:37
+#, sh-format
+msgid "# converting '$i'... ($a out of $dateianzahl)"
+msgstr "# Conversion '$i'... ($a sur $dateianzahl)"
+
+#: script.sh:49
+msgid "# generating thumbnails..."
+msgstr "# générer miniatures ..."
+
+#: script.sh:51
+msgid "# conversion is ready."
+msgstr "# la conversion est prêt."
+
+#: script.sh:52
+msgid "conversion is ready"
+msgstr "la conversion est prêt"
