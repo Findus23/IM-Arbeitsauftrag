@@ -10,7 +10,7 @@ else
 fi
 
 format=$(zenity --entry --text "Welches Dateiformat soll ausgegeben werden?" --title "Dateiformat") || exit 1
-if [ -z $format ]
+if [ -z $format ] # keine Eingabe
 then
 	format="png"
 fi
@@ -21,6 +21,7 @@ then
 	name="2008­-Sanierung­-"
 fi
 
+echo "Logo wird verkleinert"
 convert -monitor -resize 100x Logo-ohne-BRG-klein.png ./done/logo.png
 
 a=1
@@ -37,14 +38,15 @@ do
 		-gravity SouthEast ./done/logo.png -geometry +15+15 \
 		-composite \
 			-bordercolor snow -background black \
-			 -gravity center -font 'Liberation Sans' -pointsize 26 \
+			 -gravity center -font Liberation-Sans -pointsize 26 \
 		+polaroid \
 		./done/$name­$a_f.$format
 	echo "$a/$dateianzahl*100" | bc -l >&3
 	((a++))
 done
 echo "# Thumbnails werden erstellt..." >&3
-montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/$name*.$format -caption '%f\n%wx%h' -font 'Liberation Sans' -pointsize 20 -background transparent -frame 5 ./done/Thumbnails.$format
+rm ./done/logo.png
+montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/*.$format -caption '%f\n%wx%h' -font Liberation-Sans -pointsize 20 -background transparent -frame 5 ./done/Thumbnails.$format
+
 echo "# Das Programm ist fertig." >&3
 notify-send --app-name=imagemagick --icon=imagemagick -t 5000 Imagemagick "Konvertierung abgeschlossen" #im Paket libnotify-bin
-rm ./done/logo.png
