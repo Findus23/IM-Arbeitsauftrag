@@ -9,7 +9,7 @@ else
 	echo "alte Dateien gelöscht"
 fi
 format=$(zenity --entry --text "Welches Dateiformat soll ausgegeben werden?" --title "Dateiformat") || exit 1
-if [ -z $format ]
+if [ -z $format ] # keine Eingabe
 then
 	format="png"
 fi
@@ -33,11 +33,12 @@ do
 		-gravity SouthEast ./done/logo.png -geometry +15+15 \
 		-composite \
 			-bordercolor snow -background black \
-			 -gravity center -font 'Liberation Sans' -pointsize 26 \
+			 -gravity center -font Liberation-Sans -pointsize 26 \
 		+polaroid \
 		./done/$name­$a_f.$format
 	((a++))
 done
 rm ./done/logo.png
 montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/*.$format -caption '%f\n%wx%h' -font Liberation-Sans -pointsize 20 -background transparent -frame 5 ./done/Thumbnails.$format
+
 zenity --info --text "Das Programm ist fertig." --title "Fertig"
