@@ -8,11 +8,12 @@ else
 	rm ./done/*
 	echo "alte Dateien gelöscht"
 fi
+echo "Logo wird verkleinert"
 convert -monitor -resize 100x Logo-ohne-BRG-klein.png ./done/logo.png
 a=1
 for i in *.JPG
 do
-	echo "./neu/Bild_$a.jpg"
+	echo "--------------./done/2008-­Sanierung-­$a.png------------------"
 	convert -monitor -caption '%f' -resize 640x $i  \
 		-gravity SouthEast ./done/logo.png -geometry +15+15 \
 		-composite \
@@ -22,4 +23,5 @@ do
 		./done/2008-­Sanierung-­$a.png
 	((a++))
 done
-montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/*.png -caption '%f\n%wx%h' -font 'Liberation Sans' -pointsize 20 -background transparent -frame 5 ./done/test.PNG
+rm ./done/logo.png
+montage -monitor  -label '%f\n%wx%h' -geometry '300x+5+5' ./done/*.png -caption '%f\n%wx%h' -font Liberation-Sans -pointsize 20 -background transparent -frame 5 ./done/thumbnails.PNG
