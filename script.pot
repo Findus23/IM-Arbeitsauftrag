@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-24 12:02+0100\n"
+"POT-Creation-Date: 2015-01-04 11:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,11 +41,15 @@ msgstr ""
 msgid "file name"
 msgstr ""
 
-#: script.sh:30
-msgid "converting..."
+#: script.sh:27
+msgid "resizing Logo"
 msgstr ""
 
 #: script.sh:31
+msgid "converting..."
+msgstr ""
+
+#: script.sh:32
 msgid "# determining files..."
 msgstr ""
 
@@ -54,14 +58,14 @@ msgstr ""
 msgid "# converting '$i'... ($a out of $dateianzahl)"
 msgstr ""
 
-#: script.sh:49
+#: script.sh:50
 msgid "# generating thumbnails..."
 msgstr ""
 
-#: script.sh:51
+#: script.sh:52
 msgid "# conversion is ready."
 msgstr ""
 
-#: script.sh:52
+#: script.sh:53
 msgid "conversion is ready"
 msgstr ""

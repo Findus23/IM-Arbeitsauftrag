@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: script\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-24 12:02+0100\n"
-"PO-Revision-Date: 2014-12-24 12:03+0100\n"
+"POT-Creation-Date: 2015-01-04 11:24+0100\n"
+"PO-Revision-Date: 2015-01-04 11:25+0100\n"
 "Last-Translator: Lukas Winkler <l.winkler23@gmx.at>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -45,11 +45,15 @@ msgstr "Welchen  Namen sollen die Dateien haben?"
 msgid "file name"
 msgstr "Dateiname"
 
-#: script.sh:30
-msgid "converting..."
-msgstr "\"Konvertierung..."
+#: script.sh:27
+msgid "resizing Logo"
+msgstr "Logo wird verkleinert"
 
 #: script.sh:31
+msgid "converting..."
+msgstr "Konvertierung..."
+
+#: script.sh:32
 msgid "# determining files..."
 msgstr "# Ermittle Dateien..."
 
@@ -58,14 +62,14 @@ msgstr "# Ermittle Dateien..."
 msgid "# converting '$i'... ($a out of $dateianzahl)"
 msgstr "# Datei '$i' wird konvertiert... ($a von $dateianzahl)"
 
-#: script.sh:49
+#: script.sh:50
 msgid "# generating thumbnails..."
 msgstr "# Thumbnails werden erstellt..."
 
-#: script.sh:51
+#: script.sh:52
 msgid "# conversion is ready."
 msgstr "# Das Programm ist fertig."
 
-#: script.sh:52
+#: script.sh:53
 msgid "conversion is ready"
 msgstr "Das Programm ist fertig"
